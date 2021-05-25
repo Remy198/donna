@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donna by legal1st</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Raleway:100,200,600,700" rel="stylesheet">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div class="logo">
+    <a href="https://legal-first.de"><img src="./pictures/Logo-1.png"/></a>
+  </div>
+</header>
+
+  <!-- Banner -->
+  <div id="banner">
+    <h1>Donna</h1><break>
+    <h2>by legal 1st</h2>
+  </div>
+
+  <div id= "Vorstellung">
+    <h3>Was ist die Donna?</h3>
+    <p>Donna ist eine Assistentin in juristischen Rechtsfragen.</p><break>
+    <p>Die erste ihrer Art.</p><break>
+    <p>Sie versteht nicht nur Deutsch.</p><break>
+    <p>Sie versteht auch <strong>das Recht.</strong></p><break>
+    <p>Geschaffen, um Ihnen zu helfen.</p><break>
+
+    </p>
+  </div>
+
+  <div id="form">
+    <form method="POST" action="{{ url_for('generator.analyze') }}">
+        <div class="form-group">
+        <input type="text" class="form-control" placeholder="Frage eingeben" name="title"/>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Absenden</button>
+    </form>
+    <p class="Antwort">Antwort: {{ text }}</p>
+  </div>
+
+
+  <!-- Footer -->
+  <div id= disclaimer>
+    <strong>Warnung - Haftungsbeschränkung</strong>
+    <p>Wir übernehmen keinerlei Haftung für die Inhalte, die der Algorithmus aufgrund der hier getätigten Eingaben ausgibt. 
+      Es handelt sich vorliegend um einen Prototypen, also einen ersten Versuch, juristische Inhalte über einen Algorithmus 
+      anhand individueller Anfragen automatisch erstellen zu lassen. Dieses System ist noch nicht ausgereift. Die Zurverfügungstellung
+      dieses Systems ist ein Test und kann eine ordnungsgemäße Rechtsberatung nicht ersetzen.
+    </p>
+  </div>
+</body>
+</html>
+
+
+<!--body>
+  <header>
+    <div id="logo">
+      <a href="https://legal-first.de"><img id = "logo" src="./pictures/Logo-1.png"/></a>
+      </div>
+    <nav>
+      <ul>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Lumber</a></li>
+        <li><a href="#">Paint</a></li>
+        <li><a href="#">Garden</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="banner">
+    <h1>Donna by legal1st</h1>
+    <p>But it doesn't have to be! Let our handy Virtual Paint Department 
+      help guide you through the process of choosing a color. 
+      Know the hue? You know what to do. 
+      Click the order button and we'll get the paint to you.</p>
+  </div>
+
+  <div class="item">
+    <h2 id="frame">Unsere Mission</h2>
+    <img src=""/>
+ 
+    <p>Wir sind eine Team aus technikbegeisterten Juristen/Anwälten, Managern und Marketingprofessionals das ein Ziel konkretes Ziel
+      vor Augen hat: <break>
+      Die echte! Digitalisierung von Rechtsberatung. Viele legaltech-Startups haben in den vergangenen Jahren sehr innovative und
+    zum Teil sehr erfolgreiche Speziallösungen für Spezialprobleme entwickelt. Es hat aber noch kein Start-Up versucht, die 
+  Kernarbeit eines Juristen - die Anwendung von juristischem Fachwissen auf einen Fall - über ein vollständig digitales und 
+automatisch arbeitendes System abzubilden. "Donna" unser erster Versuch, dieses zu tun. Wir laden Sie dazu ein, uns auf unserer Reise zu begleiten,
+auf der wir "Donna" kontinuierlich verbessern und gleichzeitig jedem/jeder, eine juristische Beraterin an die Hand geben, wie 
+sie das Jahr 2021 und wir alle auch verdienen. Von überall, zu jederzeit, zu jedem Rechtsproblem so lange Sie wollen erreichbar.</break>
+    </p>
+  </div>
+
+<div id= "formular">
+    <div>
+        <form method="POST" action="{{ url_for('generator.analyze') }}">
+            <div class="form-group">
+            <label for="title" style="font-size: 33px;">Donna</label>
+            <input type="text" style="height: 60px; font-size: 20px;" class="form-control" placeholder="Enter Text" name="title"/>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Absenden</button>
+        </form>
+        <p class="text-left" style="cursor: pointer; margin: 50px; padding: 10px; border-radius: 8px; font-size: 24px; background-color: rgb(154, 155, 199); max-width: 800px;">
+            Antwort: {{ text }}
+        </p>
+    </div>
+</div>
+
+<div class="item">
+  <h2 id="frame">Haftungsbeschränkung/Disclaimer</h2>
+  <img src=""/>
+
+  <p>Wir übernehmen keinerlei Haftung für die Inhalte, die der Algorithmus aufgrund der hier getätigten Eingaben ausgibt. 
+    Es handelt sich vorliegend um einen Prototypen, also einen ersten Versuch, juristische Inhalte über einen Algorithmus 
+    anhand individueller Anfragen automatisch erstellen zu lassen. Dieses System ist noch nicht ausgereift. Die Zurverfügungstellung
+    dieses Systems ist ein Test und kann eine ordnungsgemäße Rechtsberatung nicht ersetzen.
+  </p>
+</div>
+
+  
+  
+  
